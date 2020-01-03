@@ -1,0 +1,24 @@
+<view class="calssic-container">
+  <!-- 顶部容器 -->
+  <view class="classic-header">
+    <!-- 左侧时间 -->
+    <view class="header-left-time">
+      <view class="index-container">
+        <text class="plain">VOL .</text>
+        <text class="index">2640</text>
+        <view class="line"></view>
+      </view>
+      <view class="date-container">
+        <text class="month">30</text>
+        <text class="year">Dec 2019</text>
+      </view>
+    </view>
+    <!-- 右侧 喜欢,分享 -->
+    <view class="header-right-control">
+      <view class="link">喜欢</view>
+      <view class="share">分享</view>
+    </view>
+  </view>
+  <view class="classic-content"></view>
+  <view class="classic-footer"></view>
+</view>

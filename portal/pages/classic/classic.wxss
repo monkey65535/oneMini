@@ -1,0 +1,63 @@
+.calssic-container {
+  width: 100%;
+}
+
+.classic-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.classic-header .header-left-time {
+  margin-left: 20rpx;
+  margin-top: 4rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.classic-header .header-left-time .index-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.index-container .plain {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+}
+
+.index-container .index {
+  font-size: 48rpx;
+  font-weight: bold;
+}
+
+.index-container .line {
+  width: 1px;
+  height: 60rpx;
+  background: #eee;
+  margin: 0 20rpx;
+}
+
+.classic-header .header-left-time .date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-container .month {
+  font-size: 40rpx;
+}
+
+.classic-header .header-right-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30rpx;
+}
