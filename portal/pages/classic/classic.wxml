@@ -19,6 +19,8 @@
       <view class="share">分享</view>
     </view>
   </view>
-  <view class="classic-content"></view>
+  <view class="classic-content">
+    <view class=""></view>
+  </view>
   <view class="classic-footer"></view>
 </view>

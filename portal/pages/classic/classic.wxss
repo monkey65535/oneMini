@@ -61,3 +61,6 @@
   align-items: center;
   margin-right: 30rpx;
 }
+.header-right-control .link{
+  margin-right:10rpx;
+}
