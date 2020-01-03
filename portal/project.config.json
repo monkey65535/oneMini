@@ -6,26 +6,16 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
-		"enhance": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"coverView": true,
-		"nodeModules": false,
 		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
+		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.3",
+	"libVersion": "2.10.0",
 	"appid": "wx3a5c36291f3aac7f",
-	"projectname": "mini",
+	"projectname": "portal",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
