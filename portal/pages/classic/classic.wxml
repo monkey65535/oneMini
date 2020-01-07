@@ -20,7 +20,23 @@
     </view>
   </view>
   <view class="classic-content">
-    <view class=""></view>
+    <view class="content-img">
+      <image class="pic" src="http://image.wufazhuce.com/Fp9GB2xdIXBbasqQvrSy6v1zOMCx" width="100%"></image>
+    </view>
+    <view class="content-tags">
+      <image src="../../images/classic/essay@tag.png"></image>
+    </view>
+    <view class="classic-footer">
+      <view class="pop-cita">
+        人也许不认识人，但灵魂认识灵魂。
+      </view>
+    </view>
+    <view class="footer-control">
+      <view class="nav-control">
+        <image class="icon" src="../../images/classic/triangle@left.png" />
+        <text class="title">摄影 ~ ONE 一个</text>
+        <image class="icon" src="../../images/classic/triangle@right.png" />
+      </view>
+    </view>
   </view>
-  <view class="classic-footer"></view>
 </view>

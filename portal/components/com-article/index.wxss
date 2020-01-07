@@ -1,0 +1,39 @@
+.com-article-container {
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    background: #fff;
+}
+
+.article-title-tags {
+    text-align: center;
+    font-size: 22rpx;
+    margin-bottom: 20rpx;
+}
+
+.article-pic {
+    width: 100%;
+}
+
+.article-title {
+    margin-bottom: 10rpx;
+    min-height: 120rpx;
+}
+
+.article-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f1f1f1;
+}
+
+.article-footer .footer-item {
+    font-size: 22rpx;
+}
+
+.article-footer .footer-like,
+.article-footer .footer-share {
+    font-size: 22rpx;
+    margin-right: 10rpx;
+}

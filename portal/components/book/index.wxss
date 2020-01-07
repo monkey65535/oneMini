@@ -1,0 +1,33 @@
+.book-container {
+    width: 240rpx;
+    height: 360rpx;
+    margin-top: 30rpx;
+    display: flex;
+    position: relative;
+    box-shadow: 2px 2px 3px #e3e3e3;
+    flex-direction: column;
+    font-size: 22rpx
+}
+
+.book-img {
+    width: 100%;
+    height: 300rpx;
+}
+
+.book-font-item {
+    margin-top: 10rpx;
+}
+
+.book-name {
+    font-size: 24rpx;
+}
+
+.artiest {
+    color: #999999;
+    font-size: 20rpx;
+}
+
+.lover-num {
+    text-align: right;
+    color: #666666;
+}

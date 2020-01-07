@@ -1,0 +1,6 @@
+<view class="book-container">
+    <image src="https://img3.doubanio.com/lpic/s4669554.jpg" class="book-img" />
+    <view class="book-name book-font-item">黑客与艺术家</view>
+    <view class="artiest book-font-item">[美]保罗·格雷厄姆</view>
+    <view class="lover-num book-font-item">300 喜欢</view>
+</view>

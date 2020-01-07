@@ -1,2 +1,21 @@
-<!--pages/book/book.wxml-->
-<text>pages/book/book.wxml</text>
+<view class="book-container">
+    <view class="book-header">
+        <view class="search-show">
+            <image class="search-icon" src="/images/icon/search.png" />
+            搜索书籍
+        </view>
+    </view>
+    <view class="hot-book-list">
+        <view class="hot-warp">
+            <image class="hot-img" src="/images/book/quality.png" />
+        </view>
+        <div class="book-warpper">
+            <com-book></com-book>
+            <com-book></com-book>
+            <com-book></com-book>
+            <com-book></com-book>
+            <com-book></com-book>
+            <com-book></com-book>
+        </div>
+    </view>
+</view>

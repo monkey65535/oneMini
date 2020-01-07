@@ -1,0 +1,10 @@
+<view class="article-container">
+  <com-article />
+  <com-article />
+  <com-article />
+  <com-article />
+  <com-article />
+  <com-article />
+  <com-article />
+  <com-article />
+</view>
