@@ -62,5 +62,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleBack(event) {
+    wx.navigateBack({})
   }
 })

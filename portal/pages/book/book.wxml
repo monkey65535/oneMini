@@ -1,6 +1,6 @@
 <view class="book-container">
     <view class="book-header">
-        <view class="search-show">
+        <view class="search-show" bind:tap="handleLinkToSearch">
             <image class="search-icon" src="/images/icon/search.png" />
             搜索书籍
         </view>

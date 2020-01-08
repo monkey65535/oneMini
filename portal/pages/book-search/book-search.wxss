@@ -1,1 +1,74 @@
-/* pages/book-search/book-search.wxss */
+.search-header {
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 20rpx 10rpx;
+    box-sizing: border-box;
+}
+
+.search-con {
+    flex: 0 0 86%;
+    position: relative;
+}
+
+.i-icon {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    top: 12rpx;
+}
+
+.i-search {
+    left: 20rpx;
+
+}
+
+.i-cancle {
+    right: 20rpx;
+}
+
+.cancle {
+    flex: 0 0 13%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-inp {
+    border: 1px solid #f5f5f5;
+    border-radius: 100rpx;
+    padding: 0 80rpx;
+    background: #f5f5f5;
+}
+
+.tags {
+    padding: 20rpx;
+    margin-bottom: 40rpx;
+}
+
+.tags-header {
+    border-left: 10rpx solid #eee;
+    font-size: 32rpx;
+    padding-left: 20rpx;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+}
+
+.tag-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tag-content text {
+    margin-right: 10rpx;
+    margin-top: 10rpx;
+    padding: 4rpx 12rpx;
+    background-color: #f5f5f5;
+    color: #666666;
+    border-radius: 2px;
+    font-size: 26rpx;
+}

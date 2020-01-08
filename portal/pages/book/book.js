@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleLinkToSearch(event) {
+    wx.navigateTo({
+      url: '/pages/book-search/book-search',
+    })
   }
 })
