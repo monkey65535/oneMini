@@ -1,1 +1,95 @@
-/* pages/my/my.wxss */
+.my-container {}
+
+.my-header {
+    width: 100%;
+    height: 480rpx;
+    position: relative;
+}
+
+.my-header .my-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.my-header .header-con {
+    width: 160rpx;
+    height: 160rpx;
+    position: absolute;
+    top: 200rpx;
+    left: 300rpx;
+}
+
+.my-header .header-con image {
+    width: 100%;
+    height: 100%;
+}
+
+.about-me image {
+    display: block;
+    width: 45rpx;
+    height: 45rpx;
+    margin-bottom: 10rpx;
+}
+
+.about-me {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 80rpx;
+    bottom: 40rpx;
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.likes-me {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 80rpx;
+    bottom: 40rpx;
+}
+
+.likes-me view {
+    text-align: center;
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.likes-me .likes-num {
+    font-size: 40rpx;
+    color: #333333;
+    margin-bottom: 10rpx;
+}
+
+.books-list .list-header {
+    text-align: center;
+    margin: 16rpx 0;
+}
+
+.books-list .list-header image {
+    width: 97rpx;
+    height: 42rpx;
+}
+
+.books-warpper {
+    width: 100%;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+}
+
+.books-srcoll-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.books-srcoll-container .book-com {
+    margin-right: 24rpx;
+}
+
+.books-srcoll-container .book-com:last-of-type {
+    margin-right: 0;
+}
