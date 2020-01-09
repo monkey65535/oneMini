@@ -1,11 +1,15 @@
 <view class="com-article-container">
-    <view class="article-title-tags">- 问答 -</view>
-    <view class="article-title">2019年 你想最珍藏的一件小事是什么?</view>
-    <view class="article-footer">
-        <view class="footer-time footer-item">今天</view>
-        <view clsss="footer-control footer-item">
-            <text class="footer-like">喜欢</text>
-            <text class="footer-share">分享</text>
-        </view>
+  <view class="article-title-tags">- 问答 -</view>
+  <view class="article-title">2019年 你想最珍藏的一件小事是什么?</view>
+  <view class="article-footer">
+    <view class="footer-time footer-item">今天</view>
+    <view clsss="footer-control footer-item">
+      <view class="footer-like">
+        <image src="/images/icon/like@dis.png" style="width:30rpx;height:26rpx;margin-right:20rpx;"></image>
+      </view>
+      <view class="footer-share">
+        <image src="/images/icon/share.png" style="width:30rpx;height:30rpx;margin-right:20rpx;"></image>
+      </view>
     </view>
+  </view>
 </view>

@@ -15,8 +15,12 @@
     </view>
     <!-- 右侧 喜欢,分享 -->
     <view class="header-right-control">
-      <view class="link">喜欢</view>
-      <view class="share">分享</view>
+      <view class="link">
+        <image src="/images/icon/like@dis.png" style="width:40rpx;height:36rpx;margin-right:20rpx;"></image>
+      </view>
+      <view class="share">
+        <image src="/images/icon/share.png" style="width:48rpx;height:48rpx;"></image>
+      </view>
     </view>
   </view>
   <view class="classic-content">
@@ -27,9 +31,7 @@
       <image src="../../images/classic/essay@tag.png"></image>
     </view>
     <view class="classic-footer">
-      <view class="pop-cita">
-        人也许不认识人，但灵魂认识灵魂。
-      </view>
+      <view class="pop-cita">人也许不认识人，但灵魂认识灵魂。</view>
     </view>
     <view class="footer-control">
       <view class="nav-control">

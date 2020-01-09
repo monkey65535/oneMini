@@ -34,6 +34,8 @@
 
 .article-footer .footer-like,
 .article-footer .footer-share {
+    padding-top: 20rpx;
+    display: inline-block;
     font-size: 22rpx;
-    margin-right: 10rpx;
+    padding-right: 10rpx;
 }

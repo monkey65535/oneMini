@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isTrigger: false
   },
 
   /**
@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleTriggerTags(event) {
+    const isT = this.data.isTrigger
+    this.setData({
+      isTrigger: !isT
+    })
   }
 })

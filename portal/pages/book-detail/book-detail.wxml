@@ -1,2 +1,78 @@
-<!--pages/book-detail/book-detail.wxml-->
-<text>pages/book-detail/book-detail.wxml</text>
+<view class="book-detail-warpper">
+    <view class="detail-header detail-warp">
+        <image src="https://img3.doubanio.com/lpic/s4059293.jpg" class="book-img" />
+        <view class="articler">
+            <text class="name">Dive Into Python 3</text>
+            <text class="author">MarkPilgrim</text>
+        </view>
+    </view>
+    <view class="detail-tags-list detail-warp">
+        <view class="tags-header header">标签</view>
+        <view class="tags-list">
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10085</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10086</text>
+            <text class="tags">沙发沙发 +10086</text>
+        </view>
+    </view>
+    <view class="detail-message detail-warp">
+        <view class="header">内容简介</view>
+        <text class="message-count" space="ensp" decode="{{true}}">
+            Mark Pilgrim's Dive Into Python 3 is a hands-on guide to Python 3 (the latest version of the Python language) and its differences from Python 2. As in the original book, Dive Into Python, each chapter starts with a real, complete code sample, proceeds to pick it apart and explain the pieces, and then puts it all back together in a summary at the end.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This book includes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Example programs completely rewritten to illustrate powerful new concepts now available in Python 3: sets, iterators, generators, closures, comprehensions, and much more&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* A detailed case study of porting a major library from Python 2 to Python 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* A comprehensive appendix of all the syntactic and semantic changes in Python 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the perfect resource for you if you need to port applications to Python 3, or if you like to jump into languages fast and get going right away.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What you'll learn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Understand Python 3 code by seeing it broken down and explained&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Make full use of the latest Python features such as iterators, generators, closures, classes and comprehensions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Refactor existing code to improve maintainability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Learn how to serialize Python objects with the pickle protocol and JSON format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Learn how to package your own Python libraries and upload them to the Python Package Index to share your projects with Python developers worldwide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Use Python 3 to consume HTTP web services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Port existing Python applications to Python 3 by following a case study for a major library&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Who is this book for?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Anyone who wants to learn the latest version of Python in a fast, hands-on fashion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Existing Python programmers who want to learn quickly how to make the most of the features of the latest version of Python and port their code to it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Programmers coming from other languages wanting a fast introduction to Python that gets them thinking about advanced concepts quickly
+        </text>
+    </view>
+    <view class="detail-info detail-warp">
+        <view class="header">书本信息</view>
+        <view class="book-message">
+            <view class="message-left">出版社</view>
+            <view class="message-right">Arpies</view>
+        </view>
+        <view class="book-message">
+            <view class="message-left">出版年</view>
+            <view class="message-right">2009-11-6</view>
+        </view>
+        <view class="book-message">
+            <view class="message-left">页数</view>
+            <view class="message-right">379</view>
+        </view>
+        <view class="book-message">
+            <view class="message-left">定价</view>
+            <view class="message-right">USD 44.90</view>
+        </view>
+        <view class="book-message">
+            <view class="message-left">装帧</view>
+            <view class="message-right">Paperback</view>
+        </view>
+    </view>
+    <view class="footer-warpper" wx:if="{{!isTrigger}}">
+        <view class="footer-input" bind:tap="handleTriggerTags">输入短评</view>
+        <view class="footer-like">
+            <image src="/images/icon/like@dis.png" />
+            <view class="count">188</view>
+        </view>
+    </view>
+    <view class="footer-input-tags" wx:else>
+        <view class="footer-content">
+            <view class="footer-header">
+                <text class="none">添加标签</text>
+                <text class="cancle" bind:tap="handleTriggerTags">取消</text>
+            </view>
+            <view class="hot-tags">
+                <text class="tags">沙发沙发</text>
+                <text class="tags">沙发沙发</text>
+                <text class="tags">沙发沙发</text>
+                <text class="tags">沙发沙发</text>
+            </view>
+            <view class="tag-input-warp">
+                <input type="text" placeholder="短评最多12个字" />
+            </view>
+        </view>
+    </view>
+</view>
