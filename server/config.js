@@ -4,11 +4,11 @@ module.exports = {
     appkey: "DJKng2Ln0ZgNItbt",
     port: '3003',
     database: {
-        host: 'localhost',
+        host: '122.51.231.49',
         user: 'root',
-        password: '123',
+        password: 'Pass@1234',
         port: '3306',
-        dbName: 'island'
+        dbName: 'oneMini'
     },
     security: {
         secretKey: "1qaz@wsx",

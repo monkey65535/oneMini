@@ -6,9 +6,12 @@ class Init {
     constructor(app) {
         this.app = app;
     }
+
     initCore() {
+        this.loadHttpExpection()
         this.initLoadRouters();
     }
+
     initLoadRouters() {
         const apiDirectory = path.join(process.cwd(), `/app/api`)
         // 递归加载全部路由
@@ -19,6 +22,11 @@ class Init {
                 }
             }
         })
+    }
+
+    loadHttpExpection() {
+        const catchError = require('../middleware/exception')
+        this.app.use(catchError)
     }
 }
 
