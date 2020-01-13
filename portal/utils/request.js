@@ -8,7 +8,7 @@ const tips = {
 }
 
 // 统一进行错误处理,传入上方标签
-function _show_error(error_code) {
+function show_error(error_code) {
   if (!error_code) {
     error_code = 1
   }
@@ -21,7 +21,7 @@ function _show_error(error_code) {
 }
 
 
-function HTTPRequest({
+export function HTTPRequest({
   method,
   url,
   params
@@ -29,7 +29,7 @@ function HTTPRequest({
   //封装AJAX请求
   return new Promise((reslove, reject) => {
     wx.request({
-      url: `${HTTPUrl}/url`,
+      url: `${HTTPUrl}/${url}`,
       data: params,
       header: {
         'content-type': 'application/json'
@@ -40,13 +40,9 @@ function HTTPRequest({
       },
       fail: function(res) {
         // 统一进行错误处理
-        this._show_error(1)
+        show_error(1)
         reject(res)
       }
     })
   })
-}
-
-module.exports = {
-  HTTPRequest
 }

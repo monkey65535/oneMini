@@ -1,25 +1,19 @@
 import {
-  HTTPRequset
+  HTTPRequest
 } from '../utils/request.js'
 
 
 // 获取期刊首页
-function getClassic(id) {
-  const params = {}
-  if (id) {
-    params = {
-      id
-    }
+export function getClassic(id) {
+  let url = '';
+  if (!id) {
+    url = "/api/classic"
+  } else {
+    url = `/api/classic?id=${id}`
   }
   return HTTPRequset({
     method: 'get',
-    url: "/api/classic",
-    params
+    url: url
   })
 }
 
-
-
-module.exports =  {
-  getClassic
-}
