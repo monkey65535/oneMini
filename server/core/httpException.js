@@ -5,6 +5,7 @@ class HttpException extends Error {
         this.errorCode = errorCode
         this.code = code
         this.msg = msg
+        this.success = false
     }
 }
 
@@ -14,6 +15,7 @@ class Forbbiden extends HttpException {
         this.code = 403;
         this.msg = msg;
         this.errorCode = errorCode;
+        this.success = false
     }
 
 }
@@ -24,11 +26,24 @@ class AuthFailed extends HttpException {
         this.code = 401;
         this.msg = msg;
         this.errorCode = errorCode;
+        this.success = false
     }
 }
+
+class NoData extends HttpException {
+    constructor(msg = '数据查询为空', errorCode = 200) {
+        super();
+        this.code = 200;
+        this.msg = msg;
+        this.errorCode = errorCode;
+        this.success = false
+    }
+}
+
 
 module.exports = {
     HttpException,
     Forbbiden,
-    AuthFailed
+    AuthFailed,
+    NoData
 }

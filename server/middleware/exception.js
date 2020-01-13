@@ -17,14 +17,16 @@ const catchError = async (ctx, next) => {
             ctx.body = {
                 msg: error.msg,
                 error_code: error.errorCode,
-                request: `${ctx.mathod}  ${ctx.path}`
+                success: false,
+                request: `${ctx.method}  ${ctx.path}`
             }
             ctx.status = error.code
         } else {
             ctx.body = {
                 msg: '出现了一个错误~',
                 error_code: 99999,
-                request: `${ctx.mathod}  ${ctx.path}`
+                success: false,
+                request: `${ctx.method}  ${ctx.path}`
             }
             ctx.status = 500;
         }

@@ -21,7 +21,7 @@ User.init({
     },
     nick_pic: {
         type: Sequelize.STRING,
-        comment: "用户名"
+        comment: "用户头像"
     },
     openid: {
         type: Sequelize.STRING(64),
