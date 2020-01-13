@@ -1,6 +1,7 @@
-const {
-  HTTPUrl
-} = require('./config.js')
+// const {
+//   HTTPUrl
+// } = require('./config.js')
+import {HTTPUrl} from './config.js'
 
 const tips = {
   1: '抱歉，出现了一个错误',
@@ -21,7 +22,7 @@ function show_error(error_code) {
 }
 
 
-function HTTPRequest({
+export function HTTPRequest({
   method,
   url,
   params
@@ -34,9 +35,9 @@ function HTTPRequest({
       header: {
         'content-type': 'application/json'
       },
-      method: methods,
+      method: method,
       success: function(res) {
-        reslove(res)
+        reslove(res.data)
       },
       fail: function(res) {
         // 统一进行错误处理
@@ -47,6 +48,7 @@ function HTTPRequest({
   })
 }
 
-module.exports = {
-  HTTPRequest
-}
+// module.exports = {
+//   HTTPRequest
+// }
+

@@ -58,6 +58,10 @@ OneHome.init({
         type: {
             type: Sequelize.STRING(32),
             comment: "期刊图片类型"
+        },
+        sentence:{
+            type: Sequelize.STRING,
+            comment: "句子内容"
         }
     },
     {

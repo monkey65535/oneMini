@@ -1,22 +1,24 @@
-const {
+// const {
+//   HTTPRequest
+// } = require('../utils/request.js')
+
+import {
   HTTPRequest
-} = require('../utils/request.js')
-
-
+} from '../utils/request.js'
 // 获取期刊首页
-function getClassic(id) {
+export function getClassic(id) {
   let url = '';
   if (!id) {
-    url = "/api/classic"
+    url = "api/classic"
   } else {
-    url = `/api/classic?id=${id}`
+    url = `api/classic?id=${id}`
   }
-  return HTTPRequset({
+  return HTTPRequest({
     method: 'get',
     url: url
   })
 }
 
-module.exports = {
-  getClassic
-}
+// module.exports = {
+//   getClassic
+// }

@@ -1,8 +1,10 @@
 // pages/classic/classic.js
-const {
+// const {
+//   getClassic
+// } = require('../../api/Classic.js')
+import {
   getClassic
-} = require('../../api/Classic.js') 
-
+} from '../../api/Classic.js'
 Page({
 
   /**
@@ -10,7 +12,12 @@ Page({
    */
   data: {
     pageData: {
-
+      imgUrl: "",
+      may: "-",
+      day: "-",
+      vol_num: "-",
+      sentence: "-",
+      type: "-"
     }
   },
 
@@ -18,9 +25,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(getClassic,'FN');
-
-    getClassic(8)
+    getClassic()
+      .then(res => {
+        this.setData({
+          pageData: {
+            ...res
+          }
+        })
+      })
   },
 
   /**
@@ -70,5 +82,33 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  // 获取上一个封面 
+  changeClassic(event) {
+    const type = event.currentTarget.dataset.tap;
+    if (!type) return false
+    const currentId = this.data.pageData.id;
+    let sendId = currentId;
+    if (type === 'prev') {
+      sendId--
+    } else {
+      sendId++
+    }
+    getClassic(sendId)
+      .then(res => {
+        if (res && res.error_code !== 400) {
+          this.setData({
+            pageData: {
+              ...res
+            }
+          })
+        } else {
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      })
   }
 })

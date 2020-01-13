@@ -18,13 +18,17 @@ class ArgentOneData {
 
     // init函数
     async initNet() {
-        await schedule.scheduleJob('00 00 14 * * *', async () => {
+        await this.cherroOneForURL();
+        await this.cherroOneArticl();
+        await this.cherroOneQuestions();
+        await this.cherroOneSwiper();
+        /*await schedule.scheduleJob('00 00 14 * * *', async () => {
             await this.cherroOneForURL();
             await this.cherroOneArticl();
             await this.cherroOneQuestions();
             await this.cherroOneSwiper();
             console.log(`执行了定时任务 ${new Date()}`);
-        });
+        });*/
     }
 
     /*

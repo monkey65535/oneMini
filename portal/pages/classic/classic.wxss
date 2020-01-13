@@ -1,10 +1,16 @@
 .calssic-container {
   width: 100%;
   position: relative;
+  padding-top: 100rpx;
+  padding-bottom: 40rpx;
+  
 }
 
 .classic-header {
-  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
   display: flex;
   flex-direction: row;
   height: 100rpx;
@@ -12,6 +18,7 @@
   justify-content: space-between;
   border-top: 1px solid #f5f5f5;
   border-bottom: 1px solid #f5f5f5;
+  background: #fff;
 }
 
 .classic-header .header-left-time {
@@ -88,6 +95,7 @@
   text-align: center;
   margin: 180rpx 0 0;
   font-size: 36rpx;
+  padding: 0 40rpx;
 }
 
 .content-tags {

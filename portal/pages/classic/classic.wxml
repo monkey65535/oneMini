@@ -5,12 +5,12 @@
     <view class="header-left-time">
       <view class="index-container">
         <text class="plain">VOL .</text>
-        <text class="index">2640</text>
+        <text class="index">{{pageData.vol_num}}</text>
         <view class="line"></view>
       </view>
       <view class="date-container">
-        <text class="month">30</text>
-        <text class="year">Dec 2019</text>
+        <text class="month">{{pageData.day}}</text>
+        <text class="year">{{pageData.may}}</text>
       </view>
     </view>
     <!-- 右侧 喜欢,分享 -->
@@ -25,19 +25,19 @@
   </view>
   <view class="classic-content">
     <view class="content-img">
-      <image class="pic" src="http://image.wufazhuce.com/Fp9GB2xdIXBbasqQvrSy6v1zOMCx" width="100%"></image>
+      <image class="pic" src="{{pageData.imgUrl}}" width="100%"></image>
     </view>
     <view class="content-tags">
       <image src="../../images/classic/essay@tag.png"></image>
     </view>
     <view class="classic-footer">
-      <view class="pop-cita">人也许不认识人，但灵魂认识灵魂。</view>
+      <view class="pop-cita">{{pageData.sentence}}</view>
     </view>
     <view class="footer-control">
       <view class="nav-control">
-        <image class="icon" src="../../images/classic/triangle@left.png" />
-        <text class="title">摄影 ~ ONE 一个</text>
-        <image class="icon" src="../../images/classic/triangle@right.png" />
+        <image class="icon" src="../../images/classic/triangle@left.png" data-tap="prev" bind:tap="changeClassic" />
+        <text class="title">{{pageData.type}} ~ ONE 一个</text>
+        <image class="icon" src="../../images/classic/triangle@right.png" data-tap="next" bind:tap="changeClassic" />
       </view>
     </view>
   </view>

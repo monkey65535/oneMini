@@ -17,7 +17,8 @@ router.get('/', async (ctx, next) => {
             const res = await OneHome.findOne({
                 where: {
                     id
-                }
+                },
+                attributes: ["id", "type", "imgUrl", "vol_num", "day", "may", "type", "sentence"]
             })
             if (!res) {
                 throw new NoData("数据查询为空")
@@ -27,7 +28,8 @@ router.get('/', async (ctx, next) => {
         }
     } else {
         const res = await OneHome.findOne({
-            order: [['id', 'DESC']]      // 倒序排序
+            // order: [['id', 'DESC']]      // 倒序排序
+            attributes: ["id", "type", "imgUrl", "vol_num", "day", "may", "type", "sentence"]
         })
         if (!res) {
             throw new NoData("数据查询为空")

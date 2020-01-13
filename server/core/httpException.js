@@ -31,9 +31,9 @@ class AuthFailed extends HttpException {
 }
 
 class NoData extends HttpException {
-    constructor(msg = '数据查询为空', errorCode = 200) {
+    constructor(msg = '数据查询为空', errorCode = 400) {
         super();
-        this.code = 200;
+        this.code = 400;
         this.msg = msg;
         this.errorCode = errorCode;
         this.success = false
