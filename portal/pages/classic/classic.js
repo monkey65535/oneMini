@@ -1,7 +1,7 @@
 // pages/classic/classic.js
-import {
+const {
   getClassic
-} from '../../api/Classic.js'
+} = require('../../api/Classic.js') 
 
 Page({
 

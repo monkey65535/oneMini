@@ -1,10 +1,10 @@
-import {
+const {
   HTTPRequest
-} from '../utils/request.js'
+} = require('../utils/request.js')
 
 
 // 获取期刊首页
-export function getClassic(id) {
+function getClassic(id) {
   let url = '';
   if (!id) {
     url = "/api/classic"
@@ -17,3 +17,6 @@ export function getClassic(id) {
   })
 }
 
+module.exports = {
+  getClassic
+}

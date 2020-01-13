@@ -1,6 +1,6 @@
-import {
+const {
   HTTPUrl
-} from './config.js'
+} = require('./config.js')
 
 const tips = {
   1: '抱歉，出现了一个错误',
@@ -21,7 +21,7 @@ function show_error(error_code) {
 }
 
 
-export function HTTPRequest({
+function HTTPRequest({
   method,
   url,
   params
@@ -45,4 +45,8 @@ export function HTTPRequest({
       }
     })
   })
+}
+
+module.exports = {
+  HTTPRequest
 }
