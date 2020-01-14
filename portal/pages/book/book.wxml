@@ -1,21 +1,15 @@
 <view class="book-container">
-    <view class="book-header">
-        <view class="search-show" bind:tap="handleLinkToSearch">
-            <image class="search-icon" src="/images/icon/search.png" />
-            搜索书籍
-        </view>
+  <view class="book-header">
+    <view class="search-show" bind:tap="handleLinkToSearch">
+      <image class="search-icon" src="/images/icon/search.png" /> 搜索书籍
     </view>
-    <view class="hot-book-list">
-        <view class="hot-warp">
-            <image class="hot-img" src="/images/book/quality.png" />
-        </view>
-        <div class="book-warpper">
-            <com-book></com-book>
-            <com-book></com-book>
-            <com-book></com-book>
-            <com-book></com-book>
-            <com-book></com-book>
-            <com-book></com-book>
-        </div>
+  </view>
+  <view class="hot-book-list">
+    <view class="hot-warp">
+      <image class="hot-img" src="/images/book/quality.png" />
     </view>
+    <div class="book-warpper">
+      <com-book wx:for="{{bookList}}" content="{{book}}" wx:for-item="book"></com-book>
+    </div>
+  </view>
 </view>

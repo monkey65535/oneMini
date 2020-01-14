@@ -1,2 +1,4 @@
 <!--pages/article-detail/article-detail.wxml-->
-<text>pages/article-detail/article-detail.wxml</text>
+<view class="article-detail-container">
+  <rich-text class="rich-text" nodes="{{richHTML}}" wx:if="{{richHTML}}"></rich-text>
+</view>

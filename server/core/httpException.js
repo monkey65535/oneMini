@@ -30,6 +30,16 @@ class AuthFailed extends HttpException {
     }
 }
 
+class ParameterError extends HttpException {
+    constructor(msg = '参数错误', errorCode = 10004) {
+        super();
+        this.code = 401;
+        this.msg = msg;
+        this.errorCode = errorCode;
+        this.success = false
+    }
+}
+
 class NoData extends HttpException {
     constructor(msg = '数据查询为空', errorCode = 400) {
         super();
@@ -45,5 +55,6 @@ module.exports = {
     HttpException,
     Forbbiden,
     AuthFailed,
-    NoData
+    NoData,
+    ParameterError
 }

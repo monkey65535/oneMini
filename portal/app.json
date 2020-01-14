@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/book-search/book-search",
+    "pages/book/book",
     "pages/article/article",
     "pages/article-detail/article-detail",
     "pages/classic/classic",
     "pages/book-detail/book-detail",
-    "pages/book-search/book-search",
     "pages/my/my",
-    "pages/book/book",
     "pages/about/about",
     "pages/course/course",
     "pages/classic-detail/classic-detail",

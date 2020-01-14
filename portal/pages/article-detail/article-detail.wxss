@@ -1,1 +1,5 @@
 /* pages/article-detail/article-detail.wxss */
+.article-detail-container{
+  box-sizing: border-box;
+  padding: 10rpx 40rpx;
+}
