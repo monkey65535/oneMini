@@ -22,3 +22,13 @@ export function serachBook(bookname, start = 0, count = 20, summary = 1) {
     }
   })
 }
+
+export function getBookDetail(id) {
+  if (!id) {
+    return Promise.reject('请传入书籍ID')
+  }
+  return HTTPRequest({
+    method:"GET",
+    url:`api/book/bookdetail/${id}`
+  })
+}

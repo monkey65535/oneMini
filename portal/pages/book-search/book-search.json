@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "com-book": "/components/book/index"
+    "com-book": "/components/book/index",
+    "v-loading": "/miniprogram_npm/lin-ui/loading/index"
   }
 }

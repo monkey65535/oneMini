@@ -24,6 +24,15 @@ class HotBook extends Model {
         const result = await axios.get(url)
         return result.data
     }
+
+    /*
+     * 获取书籍详情
+     */
+    static async getBookInfo(id) {
+        const url = util.format(yushu.detailUrl, id)
+        const detail = await axios.get(url)
+        return detail.data
+    }
 }
 
 HotBook.init({

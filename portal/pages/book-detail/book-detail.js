@@ -1,18 +1,49 @@
 // pages/book-detail/book-detail.js
+import {
+  getBookDetail
+} from '../../api/Book'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isTrigger: false
+    isTrigger: false,
+    bookInfo: {
+      author: "",
+      binding: "",
+      category: "",
+      id: "",
+      image: "",
+      isbn: "",
+      pages: "",
+      price: "",
+      pubdate: "",
+      publisher: "",
+      subtitle: "",
+      summary: "",
+      title: "",
+      translator: [],
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
+    getBookDetail(options.id)
+      .then(res => {
+        console.log(res);
+        if (res && res.code === 200) {
+          this.setData({
+            bookInfo: {
+              ...res.data
+            }
+          })
+        }
+      })
   },
 
   /**

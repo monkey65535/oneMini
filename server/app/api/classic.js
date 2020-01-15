@@ -28,7 +28,7 @@ router.get('/', async (ctx, next) => {
         }
     } else {
         const res = await OneHome.findOne({
-            // order: [['id', 'DESC']]      // 倒序排序
+            order: [['vol_num', 'DESC']],     // 倒序排序
             attributes: ["id", "type", "imgUrl", "vol_num", "day", "may", "type", "sentence"]
         })
         if (!res) {

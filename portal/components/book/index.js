@@ -6,7 +6,9 @@ Component({
   properties: {
     content: Object
   },
+  attached() {
 
+  },
   /**
    * 组件的初始数据
    */
@@ -19,8 +21,9 @@ Component({
    */
   methods: {
     handleClick(event) {
+      console.log(this.properties.content);
       wx.navigateTo({
-        url: `/pages/book-detail/book-detail`
+        url: `/pages/book-detail/book-detail?id=${this.properties.content.id}`
       })
     }
   }

@@ -2,32 +2,34 @@
   <view class="search-header">
     <view class="search-con">
       <image class="i-icon i-search" src="/images/icon/search.png" />
-      <input class="search-inp" placeholder="书籍名" />
-      <image class="i-icon i-cancle" src="/images/icon/cancel.png" />
+      <input class="search-inp" value="{{searchQ}}" placeholder="书籍名" bind:confirm="searchBook" />
+      <image class="i-icon i-cancle" src="/images/icon/cancel.png" bind:tap="clearInp" />
     </view>
     <view class="cancle" bind:tap="handleBack">
       <text>取消</text>
     </view>
   </view>
-  <view class="saerch-warpper" wx:if="{{bookData.bookList && bookData.bookList.length}}"></view>
-  <view class="tags tags-history">
-    <view class="tags-header">历史搜索</view>
-    <view class="tag-content">
-      <text>白夜行</text>
-      <text>白夜行</text>
-      <text>白夜行</text>
-      <text>白夜行</text>
-      <text>白夜行</text>
+  <view class="saerch-warpper" wx:if="{{showTags}}">
+    <view class="tags tags-history">
+      <view class="tags-header">历史搜索</view>
+      <view class="tag-content">
+        <text wx:for="{{historyList}}" wx:key="index" bind:tap="clickToSearch" data-search="{{item}}">{{item}}</text>
+      </view>
+    </view>
+    <view class="tags tags-hot">
+      <view class="tags-header">热门搜索</view>
+      <view class="tag-content">
+        <text>白夜行</text>
+        <text>白夜行</text>
+        <text>白夜行</text>
+        <text>白夜行</text>
+        <text>白夜行</text>
+      </view>
     </view>
   </view>
-  <view class="tags tags-hot">
-    <view class="tags-header">热门搜索</view>
-    <view class="tag-content">
-      <text>白夜行</text>
-      <text>白夜行</text>
-      <text>白夜行</text>
-      <text>白夜行</text>
-      <text>白夜行</text>
-    </view>
+  <view wx:else class="book-warpper">
+    <com-book wx:for="{{bookData.bookList}}" wx:for-item="bookItem" content="{{bookItem}}" wx:key="book.id">
+    </com-book>
+    <v-loading wx:if="{{showLoading}}" />
   </view>
 </view>

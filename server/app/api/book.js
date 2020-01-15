@@ -5,7 +5,7 @@ const router = new Router({
 });
 
 const {HotBook} = require('../models/HotBook')
-
+const {ParameterError} = require('../../core/httpException')
 // 获取热门书籍
 router.get('/hotbook', async (ctx, next) => {
     const res = await HotBook.findAll({
@@ -23,7 +23,16 @@ router.post('/search', async (ctx, next) => {
 })
 // 获取书籍详情
 router.get('/bookdetail/:id', async (ctx, next) => {
-
+    const {id} = ctx.params;
+    if (!id) {
+        throw new ParameterError('清传入书籍ID')
+    }
+    const res = await HotBook.getBookInfo(id);
+    ctx.body = {
+        code: 200,
+        success: true,
+        data: res
+    };
 })
 
 

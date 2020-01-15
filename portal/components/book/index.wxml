@@ -1,6 +1,6 @@
 <view class="book-container" bind:tap="handleClick">
-    <image src="{{content.image}}" class="book-img" />
-    <view class="book-name book-font-item">{{content.title}}</view>
-    <view class="artiest book-font-item">{{content.author}}</view>
-    <view class="lover-num book-font-item">300 喜欢</view>
+	<image src="{{content.image}}" class="book-img" />
+	<view class="book-name book-font-item">{{content.title}}</view>
+	<view class="artiest book-font-item">{{content.author}}</view>
+	<view class="lover-num book-font-item">300 喜欢</view>
 </view>

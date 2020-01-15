@@ -9,7 +9,7 @@
       <image class="hot-img" src="/images/book/quality.png" />
     </view>
     <div class="book-warpper">
-      <com-book wx:for="{{bookList}}" content="{{book}}" wx:for-item="book"></com-book>
+      <com-book wx:for="{{bookList}}" content="{{book}}" wx:for-item="book" wx:key="id"></com-book>
     </div>
   </view>
 </view>
