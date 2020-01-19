@@ -30,8 +30,8 @@ export function login() {
 export function getUserToken(code) {
   return HTTPRequest({
     method: 'POST',
-    url:"api/user/token",
-    params:{
+    url: "api/user/token",
+    params: {
       code
     }
   })

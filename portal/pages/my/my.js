@@ -4,6 +4,11 @@ import {
   login,
   getUserToken
 } from '../../utils/login'
+
+import {
+  loveBooks
+} from '../../api/Book'
+
 const APP = getApp();
 Page({
 
@@ -21,7 +26,8 @@ Page({
       province: "",
     },
     authorized: false,
-    userImg: ""
+    userImg: "",
+    myBookList: []
   },
 
   /**
@@ -80,18 +86,25 @@ Page({
 
   },
   onGetUserInfo(event) {
-    console.log('click')
-    login()
+    this.WXLogin()
+      .then(res => {
+        return this.getMyBooks()
+      })
+  },
+  WXLogin() {
+    return login()
       .then(res => {
         if (res.errMsg === "login:ok") {
-          console.log(res.code);
           return getUserToken(res.code)
-
         } else {
           return Promise.reject("登陆失败")
         }
       })
       .then(res => {
+        wx.setStorage({
+          data: res.token,
+          key: 'token',
+        })
         return getUserInfo()
       })
       .then(res => {
@@ -103,7 +116,16 @@ Page({
             authorized: true
           })
         }
-        console.log(res, 'getuserINfo');
+      })
+  },
+  getMyBooks() {
+    return loveBooks()
+      .then(res => {
+        if (res.success) {
+          this.setData({
+            myBookList: res.data
+          })
+        }
       })
   }
 })

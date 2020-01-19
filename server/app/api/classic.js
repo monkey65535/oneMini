@@ -22,6 +22,7 @@ router.get('/', async (ctx, next) => {
                 },
                 attributes: ["id", "type", "imgUrl", "vol_num", "day", "may", "type", "sentence"]
             })
+            console.log(res);
             if (!res) {
                 throw new NoData("数据查询为空")
             }

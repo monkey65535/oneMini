@@ -15,26 +15,29 @@ router.post('/token', async (ctx, next) => {
     }
     const {openid} = await WX.codeToToken(code);
     // 查询数据库,判断有没有openid,如果有直接生成token返回,如果没有那么在库中存入用户信息在返回
-    const isCreated = User.findOne({
+    const isCreated = await User.findOne({
         where: {
-            openid
+            openid: openid
         }
     })
     let uid;
     if (!isCreated) {
         // 存库
-        const createUser = User.create({
-
+        const createUser = await User.create({
+            openid: openid
         })
+        uid = createUser.id
     } else {
         uid = isCreated.id
     }
     // 生成token并返回
 
-    const token = await Auth.createToken(openid)
+    const token = await Auth.createToken(uid, openid)
+
     ctx.body = {
         code: 200,
-        openid
+        success:true,
+        token
     }
 })
 

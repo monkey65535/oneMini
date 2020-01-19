@@ -21,11 +21,13 @@ class Auth {
             try {
                 console.log(security.secretKey, 'security.secretKey');
                 let decode = jwt.verify(userToken.name, security.secretKey)
+                ctx.token = decode
+                await next()
             } catch (error) {
                 if (error.name === 'TokenExpiredError') {
                     errMsg = 'token已过期'
                 }
-                throw new global.errs.Forbbiden(errMsg)
+                throw new Forbbiden(errMsg)
             }
 
         }

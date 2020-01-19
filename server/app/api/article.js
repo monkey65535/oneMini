@@ -58,7 +58,7 @@ router.get('/info/:type/:id', async (ctx, next) => {
     const oneHomeRes = await superagent.get(URL)
     const $ = cheerio.load(oneHomeRes.text)
     let str = '';
-    if (type === 'atr') {
+    if (type === 'art') {
         str = $('.one-articulo').html()
     } else {
         str = $('.one-cuestion').html()

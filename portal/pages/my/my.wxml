@@ -3,8 +3,8 @@
 		<image class="my-bg" src="/images/my/my@bg.png" />
 		<view class="header-con">
 			<button class="view-get-userinfo" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo" wx:if="{{!authorized}}"></button>
-            <image src="/images/my/my.png" wx:if="{{!authorized}}"/>
-            <image src="{{userInfo.avatarUrl}}" wx:else/>
+			<image src="/images/my/my.png" wx:if="{{!authorized}}" />
+			<image src="{{userInfo.avatarUrl}}" wx:else />
 		</view>
 		<view class="about-me">
 			<image src="/images/my/about.png" />
@@ -20,17 +20,12 @@
 			<view class="list-header">
 				<image src="/images/my/like.png" />
 			</view>
-			<scroll-view scroll-x="true" class="books-warpper">
+			<scroll-view scroll-x="true" class="books-warpper" wx:if="{{myBookList && myBookList.length}}">
 				<view class="books-srcoll-container">
-					<com-book class="book-com"></com-book>
-					<com-book class="book-com"></com-book>
-					<com-book class="book-com"></com-book>
-					<com-book class="book-com"></com-book>
-					<com-book class="book-com"></com-book>
-					<com-book class="book-com"></com-book>
-					<com-book class="book-com"></com-book>
+					<com-book class="book-com" wx:for="{{myBookList}}" content="{{item}}"></com-book>
 				</view>
 			</scroll-view>
+			<view wx:else style="text-align:center;padding:60rpx 0;">暂无数据</view>
 		</view>
 	</view>
 </view>

@@ -1,7 +1,13 @@
 // const {
 //   HTTPUrl
 // } = require('./config.js')
-import {HTTPUrl} from './config.js'
+import {
+  HTTPUrl
+} from './config.js'
+
+import {
+  Base64
+} from 'js-base64'
 
 const tips = {
   1: '抱歉，出现了一个错误',
@@ -22,6 +28,17 @@ function show_error(error_code) {
 }
 
 
+function _encodeToken() {
+  const token = wx.getStorageSync('token')
+  if (token) {
+    const base64 = Base64.encode(token + ':')
+    // 格式：Authorization: Basic $(base64_encode({username}:{password})) 
+    return 'Basic ' + base64
+  } else {
+    return null
+  }
+}
+
 export function HTTPRequest({
   method,
   url,
@@ -33,13 +50,14 @@ export function HTTPRequest({
       url: `${HTTPUrl}/${url}`,
       data: params,
       header: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        'Authorization': _encodeToken()
       },
       method: method,
-      success: function(res) {
+      success: function (res) {
         reslove(res.data)
       },
-      fail: function(res) {
+      fail: function (res) {
         // 统一进行错误处理
         show_error(1)
         reject(res)
@@ -51,4 +69,3 @@ export function HTTPRequest({
 // module.exports = {
 //   HTTPRequest
 // }
-

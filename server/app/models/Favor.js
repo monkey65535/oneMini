@@ -12,7 +12,7 @@ Favor.init({
     },
     type: {
         type: Sequelize.INTEGER,
-        comment: "1 首页句子 2 问答 3  文章 4 读书"
+        comment: "1 首页句子 2 问答 3  文章 4 书籍"
     },
     like: {
         type: Sequelize.INTEGER,

@@ -28,7 +28,15 @@ export function getBookDetail(id) {
     return Promise.reject('请传入书籍ID')
   }
   return HTTPRequest({
-    method:"GET",
-    url:`api/book/bookdetail/${id}`
+    method: "GET",
+    url: `api/book/bookdetail/${id}`
+  })
+}
+
+// 获取我喜欢的书籍
+export function loveBooks() {
+  return HTTPRequest({
+    method: "post",
+    url: "api/book/mybook"
   })
 }
