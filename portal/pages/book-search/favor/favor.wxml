@@ -1,0 +1,5 @@
+<!--components/favor/favor.wxml-->
+<view class="favor-warpper">
+	<image src="/images/icon/like.png" wx:if="{{like}}" class="{{size}}"></image>
+	<image src="/images/icon/like@dis.png" class="{{size}}" wx:else></image>
+</view>

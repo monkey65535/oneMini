@@ -1,11 +1,27 @@
 // pages/my/my.js
+import {
+  getUserInfo,
+  login,
+  getUserToken
+} from '../../utils/login'
+const APP = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {
+      avatarUrl: "",
+      city: "",
+      country: "",
+      gender: "",
+      language: "",
+      nickName: "",
+      province: "",
+    },
+    authorized: false,
+    userImg: ""
   },
 
   /**
@@ -62,5 +78,32 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onGetUserInfo(event) {
+    console.log('click')
+    login()
+      .then(res => {
+        if (res.errMsg === "login:ok") {
+          console.log(res.code);
+          return getUserToken(res.code)
+
+        } else {
+          return Promise.reject("登陆失败")
+        }
+      })
+      .then(res => {
+        return getUserInfo()
+      })
+      .then(res => {
+        if (res.errMsg === "getUserInfo:ok") {
+          this.setData({
+            userInfo: {
+              ...res.userInfo
+            },
+            authorized: true
+          })
+        }
+        console.log(res, 'getuserINfo');
+      })
   }
 })

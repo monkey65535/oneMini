@@ -2,6 +2,8 @@
 import {
   serachBook
 } from '../../api/Book.js'
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+
 Page({
 
   /**
@@ -137,11 +139,16 @@ Page({
       showLoading: true,
       showTags: false
     })
+    Toast.loading({
+      mask: true,
+      message: '加载中...'
+    });
     serachBook(bookname, start, count, summary)
       .then(res => {
         this.setData({
           showLoading: false
         })
+        Toast.clear();
         this.setData({
           bookData: {
             bookList: [...bookList, ...res.books],

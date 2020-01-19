@@ -2,6 +2,7 @@ const requireDirectory = require('require-directory')
 const path = require('path')
 const Router = require('koa-router')
 const {ArgentOneData} = require('../app/net/getOnePage')
+const schedule = require('node-schedule');
 
 class Init {
     constructor(app) {
@@ -12,7 +13,10 @@ class Init {
         this.loadHttpExpection()
         this.initLoadRouters();
         // todo 每天14:00 执行定时任务,抓取One数据
-        // await this.loadOneToDataBases();
+        schedule.cancelJob("0 0 12 * * *", async () => {
+            await this.loadOneToDataBases();
+            console.log(`获取数据, 时间为${new Date()}`)
+        })
     }
 
     initLoadRouters() {

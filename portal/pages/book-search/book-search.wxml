@@ -30,6 +30,7 @@
   <view wx:else class="book-warpper">
     <com-book wx:for="{{bookData.bookList}}" wx:for-item="bookItem" content="{{bookItem}}" wx:key="book.id">
     </com-book>
-    <v-loading wx:if="{{showLoading}}" />
+
   </view>
+  <van-toast id="van-toast" />
 </view>

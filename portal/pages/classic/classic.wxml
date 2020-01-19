@@ -16,7 +16,7 @@
     <!-- 右侧 喜欢,分享 -->
     <view class="header-right-control">
       <view class="link">
-        <image src="/images/icon/like@dis.png" style="width:40rpx;height:36rpx;margin-right:20rpx;"></image>
+       <com-favor size="large" like="{{pageData.favor}}" bind:tap="likeClassic"></com-favor>
       </view>
       <view class="share">
         <image src="/images/icon/share.png" style="width:48rpx;height:48rpx;"></image>

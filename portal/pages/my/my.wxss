@@ -1,5 +1,3 @@
-.my-container {}
-
 .my-header {
     width: 100%;
     height: 480rpx;
@@ -19,9 +17,26 @@
     left: 300rpx;
 }
 
+.view-get-userinfo {
+    width: 160rpx !important;
+    height: 160rpx !important;
+    display: inline-block;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+}
+
 .my-header .header-con image {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 50%;
 }
 
 .about-me image {

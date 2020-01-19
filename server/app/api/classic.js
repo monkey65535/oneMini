@@ -3,9 +3,11 @@ const querystring = require('querystring')
 const router = new Router({
     prefix: "/api/classic"
 });
-const {OneHome} = require('../models/OneHome')
 
+const {OneHome} = require('../models/OneHome')
+const {Favor} = require('../models/Favor')
 const {NoData} = require('../../core/httpException')
+const {Auth} = require('../../middleware/Auth')
 
 // 获取最新一期期刊封面(id最大的)  如果携带参数,那么是获取对应一期的期刊封面
 router.get('/', async (ctx, next) => {
@@ -38,6 +40,10 @@ router.get('/', async (ctx, next) => {
     }
 
     ctx.body = classicRes;
+})
+
+router.post('/like', async (ctx, next) => {
+
 })
 
 module.exports = router;

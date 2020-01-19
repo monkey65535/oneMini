@@ -1,15 +1,16 @@
 <view class="com-article-container">
-  <view class="article-title-tags">- {{article.type === 'ques' ? "文章":"问答" }} -</view>
-  <view class="article-title" bind:tap="toInfo">{{article.title}}</view>
-  <view class="article-footer">
-    <view class="footer-time footer-item" wx:if="article.author">{{article.author}}</view>
-    <view clsss="footer-control footer-item">
-      <view class="footer-like">
-        <image src="/images/icon/like@dis.png" style="width:30rpx;height:26rpx;margin-right:20rpx;"></image>
-      </view>
-      <view class="footer-share">
-        <image src="/images/icon/share.png" style="width:30rpx;height:30rpx;margin-right:20rpx;"></image>
-      </view>
-    </view>
-  </view>
+	<view class="article-title-tags">- {{article.type === 'ques' ? "文章":"问答" }} -</view>
+	<view class="article-title" bind:tap="toInfo">{{article.title}}</view>
+	<view class="article-footer">
+		<view class="footer-time footer-item" wx:if="article.author">{{article.author}}</view>
+		<view clsss="footer-control footer-item">
+			<com-like like="{{false}}" size="small" class="footer-like"></com-like>
+			<!-- <view class="footer-like">
+				<image src="/images/icon/like@dis.png" style="width:30rpx;height:26rpx;margin-right:20rpx;"></image>
+			</view> -->
+			<view class="footer-share">
+				<image src="/images/icon/share.png" style="width:30rpx;height:30rpx;margin-right:20rpx;"></image>
+			</view>
+		</view>
+	</view>
 </view>

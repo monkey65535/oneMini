@@ -1,0 +1,18 @@
+.favor-warpper {
+  display: inline-block;
+}
+
+.large {
+  width: 44rpx;
+  height: 42rpx;
+}
+
+.small {
+  width: 34rpx;
+  height: 28rpx;
+}
+
+.mini {
+  width: 16rpx;
+  height: 12rpx;
+}

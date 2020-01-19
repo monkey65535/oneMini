@@ -8,6 +8,7 @@ const {Sequelize, Model} = require('sequelize')
 class User extends Model {
 }
 
+
 User.init({
     id: {
         type: Sequelize.INTEGER,
@@ -15,11 +16,15 @@ User.init({
         autoIncrement: true, // 设置自增
         comment: "用户id"
     },
-    nickname: {
+    nick_name: {
         type: Sequelize.STRING,
         comment: "用户名"
     },
-    nick_pic: {
+    gender: {
+        type: Sequelize.INTEGER,
+        comment: "用户性别"
+    },
+    avatar_url: {
         type: Sequelize.STRING,
         comment: "用户头像"
     },
@@ -27,7 +32,8 @@ User.init({
         type: Sequelize.STRING(64),
         comment: "微信openID",
         unique: true // 设置唯一值
-    }
+    },
+
 }, {
     sequelize,
     tableName: 'user'

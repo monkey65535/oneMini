@@ -1,34 +1,36 @@
 <view class="my-container">
-    <view class="my-header">
-        <image class="my-bg" src="/images/my/my@bg.png" />
-        <view class="header-con">
-            <image src="/images/my/my.png" />
-        </view>
-        <view class="about-me">
-            <image src="/images/my/about.png" />
-            <view>关于我们</view>
-        </view>
-        <view class="likes-me">
-            <view class="likes-num">10</view>
-            <view>喜欢的文章</view>
-        </view>
-    </view>
-    <view class="my-list">
-        <view class="books-list">
-            <view class="list-header">
-                <image src="/images/my/like.png" />
-            </view>
-            <scroll-view scroll-x="true" class="books-warpper">
-                <view class="books-srcoll-container">
-                    <com-book class="book-com"></com-book>
-                    <com-book class="book-com"></com-book>
-                    <com-book class="book-com"></com-book>
-                    <com-book class="book-com"></com-book>
-                    <com-book class="book-com"></com-book>
-                    <com-book class="book-com"></com-book>
-                    <com-book class="book-com"></com-book>
-                </view>
-            </scroll-view>
-        </view>
-    </view>
+	<view class="my-header">
+		<image class="my-bg" src="/images/my/my@bg.png" />
+		<view class="header-con">
+			<button class="view-get-userinfo" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo" wx:if="{{!authorized}}"></button>
+            <image src="/images/my/my.png" wx:if="{{!authorized}}"/>
+            <image src="{{userInfo.avatarUrl}}" wx:else/>
+		</view>
+		<view class="about-me">
+			<image src="/images/my/about.png" />
+			<view>关于我们</view>
+		</view>
+		<view class="likes-me">
+			<view class="likes-num">10</view>
+			<view>喜欢的文章</view>
+		</view>
+	</view>
+	<view class="my-list">
+		<view class="books-list">
+			<view class="list-header">
+				<image src="/images/my/like.png" />
+			</view>
+			<scroll-view scroll-x="true" class="books-warpper">
+				<view class="books-srcoll-container">
+					<com-book class="book-com"></com-book>
+					<com-book class="book-com"></com-book>
+					<com-book class="book-com"></com-book>
+					<com-book class="book-com"></com-book>
+					<com-book class="book-com"></com-book>
+					<com-book class="book-com"></com-book>
+					<com-book class="book-com"></com-book>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
 </view>
