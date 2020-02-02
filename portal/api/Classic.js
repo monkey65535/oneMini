@@ -6,12 +6,12 @@ import {
   HTTPRequest
 } from '../utils/request.js'
 // 获取期刊首页
-export function getClassic(id) {
+export function getClassic(vol_num) {
   let url = '';
-  if (!id) {
+	if (!vol_num) {
     url = "api/classic"
   } else {
-    url = `api/classic?id=${id}`
+		url = `api/classic?vol_num=${vol_num}`
   }
   return HTTPRequest({
     method: 'get',

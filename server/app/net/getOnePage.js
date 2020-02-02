@@ -7,9 +7,15 @@ const cheerio = require('cheerio')
 const superagent = require('superagent')
 const schedule = require('node-schedule')
 // 引入模型存储数据
-const {OneHome} = require('../models/OneHome')
-const {OneArtical} = require('../models/OneArtical')
-const {OneQues} = require('../models/OneQuestions')
+const {
+    OneHome
+} = require('../models/OneHome')
+const {
+    OneArtical
+} = require('../models/OneArtical')
+const {
+    OneQues
+} = require('../models/OneQuestions')
 
 class ArgentOneData {
     constructor() {

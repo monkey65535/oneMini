@@ -13,12 +13,12 @@ const {Auth} = require('../../middleware/Auth')
 router.get('/', async (ctx, next) => {
     let classicRes = null
     if (ctx.querystring) {
-        let {id} = querystring.decode(ctx.querystring)
-        if (id) {
+        let {vol_num} = querystring.decode(ctx.querystring)
+        if (vol_num) {
             // id = parseInt(id)
             const res = await OneHome.findOne({
                 where: {
-                    id
+                    vol_num
                 },
                 attributes: ["id", "type", "imgUrl", "vol_num", "day", "may", "type", "sentence"]
             })

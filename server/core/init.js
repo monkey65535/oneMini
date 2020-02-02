@@ -10,13 +10,15 @@ class Init {
     }
 
     async initCore() {
+        const oneDay = 1000 * 60 * 60 * 24;
         this.loadHttpExpection()
         this.initLoadRouters();
-        // todo 每天12:00 执行定时任务,抓取One数据
-        schedule.cancelJob("0 0 12 * * *", async () => {
-            await this.loadOneToDataBases();
-            console.log(`获取数据, 时间为${new Date()}`)
-        })
+        this.loadOneToDataBases()
+        // await this.loadOneToDataBases()
+        setInterval( async() => {
+            await this.loadOneToDataBases()
+        },oneDay)
+        
     }
 
     initLoadRouters() {
